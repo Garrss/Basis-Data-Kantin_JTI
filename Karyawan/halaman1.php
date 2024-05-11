@@ -33,6 +33,7 @@ $hasil = mysqli_query($conn, $query);
             echo "<td>" . $data["id_karyawan"] . "</td>";
             echo "<td>" . $data["Nama"] . "</td>";
             echo "<td>" . $data["No_Telepon"] . "</td>";
+
             echo "<td><a href='form-update.php?id_karyawan=" . $data["id_karyawan"] . "'>Edit</a> " . "</td>";
             echo "</tr>";
         }

@@ -17,12 +17,16 @@ $hasil = mysqli_query($conn, $query);
 </head>
 
 <body>
+    <h2 align="center">Pembeli</h2>
+    <!-- Tambahkan link atau tombol "Add Pembeli" di atas tabel -->
+    <a href="tambah_pembeli.php">Add Pembeli</a>
+
     <table border="1px">
         <thead>
-            <h2 align="center">Pembeli</h2>
             <tr>
                 <th scope="col">ID Pembeli</th>
                 <th scope="col">Barang</th>
+                <th scope="col">Aksi</th> <!-- Tambah kolom untuk aksi (edit) -->
             </tr>
         </thead>
         <?php

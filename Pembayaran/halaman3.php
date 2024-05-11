@@ -39,7 +39,6 @@ $hasil = mysqli_query($conn, $query);
             echo "<td>" . $data["Metode"] . "</td>";
             echo "<td><a href='form-update.php?id_pembayaran=" . $data["id_pembayaran"] . "'>Edit</a> " . "</td>";
             echo "</tr>";
-            $no++;
         }
         ?>
 
