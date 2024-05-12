@@ -3,6 +3,7 @@
 include '../connection.php';
 include '../header.php';
 
+
 $query = "SELECT * FROM pembeli";
 $hasil = mysqli_query($conn, $query);
 ?>
@@ -19,7 +20,7 @@ $hasil = mysqli_query($conn, $query);
 <body>
     <h2 align="center">Pembeli</h2>
     <!-- Tambahkan link atau tombol "Add Pembeli" di atas tabel -->
-    <a href="tambah_pembeli.php">Add Pembeli</a>
+    <a href="form-tambah.php">Add Pembeli</a>
 
     <table border="1px">
         <thead>
@@ -36,6 +37,7 @@ $hasil = mysqli_query($conn, $query);
             echo "<td>" . $data["id_pembeli"] . "</td>";
             echo "<td>" . $data["Barang"] . "</td>";
             echo "<td><a href='form-update.php?id_pembeli=" . $data["id_pembeli"] . "'>Edit</a> " . "</td>";
+            echo "<td><a href='Delete.php?action=delete&id_pembeli=" . $data["id_pembeli"] . "'>Delete</a> " . "</td";
             echo "</tr>";
         }
         ?>

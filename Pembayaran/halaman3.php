@@ -17,15 +17,19 @@ $hasil = mysqli_query($conn, $query);
 </head>
 
 <body>
+    <h2 align="center">Pembayaran</h2>
+    <!-- Tambahkan link atau tombol "Add Pembayaran" di atas tabel -->
+    <a href="Form-tambah.php">Add Pembayaran</a>
+
     <table border="1px">
         <thead>
-            <h2 align="center">Pembayaran</h2>
             <tr>
                 <th scope="col">ID Pembayaran</th>
                 <th scope="col">Tanggal</th>
                 <th scope="col">Jumlah</th>
                 <th scope="col">Harga</th>
                 <th scope="col">Metode</th>
+                <th scope="col">Aksi</th> <!-- Tambah kolom untuk aksi (edit) -->
             </tr>
         </thead>
         <?php
@@ -38,6 +42,7 @@ $hasil = mysqli_query($conn, $query);
             echo "<td>" . $data["Harga"] . "</td>";
             echo "<td>" . $data["Metode"] . "</td>";
             echo "<td><a href='form-update.php?id_pembayaran=" . $data["id_pembayaran"] . "'>Edit</a> " . "</td>";
+            echo "<td><a href='Delete.php?action=delete&id_pembayaran=" . $data["id_pembayaran"] . "'>Delete</a> " . "</td";
             echo "</tr>";
         }
         ?>
