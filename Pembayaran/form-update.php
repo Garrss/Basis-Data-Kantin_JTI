@@ -23,7 +23,7 @@ $row = mysqli_fetch_assoc($result);
 <body>
     <form action="update.php" method="post">
         <label for="Pembayaran">Pembayaran:</label>
-        <input type="text" id="tanggal" name="tanggal" value="<?php echo $row['tanggal']; ?>">
+        <input type="date" id="tanggal" name="tanggal" value="<?php echo $row['tanggal']; ?>">
         <br><br>
         <input type="text" id="Jumlah" name="Jumlah" value="<?php echo $row['Jumlah']; ?>">
         <br><br>

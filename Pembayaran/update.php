@@ -1,6 +1,7 @@
 <?php
 session_start();
 include('../connection.php');
+include('../header.php');
 
 $id_pembayaran = $_POST['id_pembayaran'];
 $tanggal = $_POST['tanggal'];
